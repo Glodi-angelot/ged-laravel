@@ -60,7 +60,7 @@ Route::middleware('auth')->group(function () {
 |--------------------------------------------------------------------------| Admin (auth + role:admin)
 |--------------------------------------------------------------------------|
 */
-Route::middleware(['auth'])
+Route::middleware(['auth', 'role:admin'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
